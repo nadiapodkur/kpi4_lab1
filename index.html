@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lab 1 Podkur Nadia</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="page-header">
+            <h1>UI Elements: Learn more</h1>
+            <p class="subtitle">A short field guide to ten interface elements you meet on almost every website — what each one is for, and a live example.</p>
+            <nav class="toc" aria-label="Section navigation">
+                <a href="#radiobutton">01 Radiobutton</a>
+                <a href="#checkbox">02 Checkbox</a>
+                <a href="#textinput">03 Text input</a>
+                <a href="#tabs">04 Tabs</a>
+                <a href="#buttons">05 Button</a>
+                <a href="#textlabel">06 Text label</a>
+                <a href="#link">07 Link</a>
+                <a href="#tooltip">08 Tooltip</a>
+                <a href="#dropdown">09 Dropdown list</a>
+                <a href="#datagrid">10 Data grid</a>
+            </nav>
+        </header>
+ 
+        <main>
+            <div class="overall" id="radiobutton">
+                <h2><span class="num">01</span> Radiobutton</h2>
+                <div class="explaination">
+                    <p>A radiobutton lets a person pick exactly <strong>one</strong> option out of a small set. All radiobuttons that share the same <code>name</code> attribute belong to one group, so selecting one automatically clears the others. Use it when the choices are mutually exclusive and few enough to show all at once.</p>
+                </div>
+                <div class="example">
+                    <div class="radio1">
+                        <h3>Choose your mood:</h3>
+                        <input type="radio" name="mood" id="sad"> <label for="sad">Sad</label><br>
+                        <input type="radio" name="mood" id="good"> <label for="good">Good</label><br>
+                        <input type="radio" name="mood" id="excellent" checked> <label for="excellent">Excellent</label>
+                    </div>
+                    <div class="radio2">
+                        <h3>Choose your favourite pet:</h3>
+                        <input type="radio" name="pet" id="cat"><label for="cat">Cat</label><br>
+                        <input type="radio" name="pet" id="dog"><label for="dog">Dog</label><br>
+                        <input type="radio" name="pet" id="parrot"><label for="parrot">Parrot</label><br>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="overall" id="checkbox">
+                <h2><span class="num">02</span> Checkbox</h2>
+                <div class="explaination">
+                    <p>A checkbox lets a person turn a single option on or off, independently of the others. Unlike radiobuttons, any number of checkboxes in a group can be checked at the same time — zero, some, or all.</p>
+                </div>
+                <div class="example">
+                    <div class="checkbox1">
+                        <h3>You would rather...</h3>
+                        <input type="checkbox" name="option" id="cinema"><label for="cinema">Go to the cinema</label><br>
+                        <input type="checkbox" name="option" id="book"><label for="book">Read a book</label><br>
+                        <input type="checkbox" name="option" id="theatre"><label for="theatre">Go to the theatre</label>
+                    </div>
+                    <div class="checkbox2">
+                        <h3>Grocery List</h3>
+                        <input type="checkbox" name="groceries" id="option1"><label for="option1">Meat</label><br>
+                        <input type="checkbox" name="groceries" id="option2"><label for="option2">Pasta</label><br>
+                        <input type="checkbox" name="groceries" id="option3"><label for="option3">Bread</label>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="overall" id="textinput">
+                <h2><span class="num">03</span> Text input</h2>
+                <div class="explaination">
+                    <p>A text input is a single-line field where a person types free-form text — a name, a search term, an answer. A <code>placeholder</code> shows a hint inside the empty field, but it disappears once typing starts, so it should never replace a real label.</p>
+                </div>
+                <div class="example">
+                    <div class="text1">
+                        <h3>Write down your favourite book?</h3>
+                        <input type="text" name="bookname" placeholder="Enter your favourite book">
+                    </div>
+                    <div class="text2">
+                        <h3>Type in your name:</h3>
+                        <input type="text" name="username" placeholder="My name is...">
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="overall" id="tabs">
+                <h2><span class="num">04</span> Tabs</h2>
+                <div class="explaination">
+                    <p>Tabs group related content into panels and show only one panel at a time, saving space compared to placing everything on the page at once. Clicking a tab's title switches the visible panel without reloading the page.</p>
+                </div>
+                <div class="example">
+                    <div class="tab">
+                        <div class="tab-buttons" role="tablist">
+                            <button class="tab-btn active" data-tab="overview" role="tab" aria-selected="true">Overview</button>
+                            <button class="tab-btn" data-tab="specs" role="tab" aria-selected="false">Specs</button>
+                            <button class="tab-btn" data-tab="reviews" role="tab" aria-selected="false">Reviews</button>
+                        </div>
+                        <div class="tab-panels">
+                            <div class="tab-panel active" id="overview" role="tabpanel">
+                                <p>This is where a short product overview would go: what it does, and why someone would want it.</p>
+                            </div>
+                            <div class="tab-panel" id="specs" role="tabpanel">
+                                <p>Specs panel: dimensions, weight, materials — the details someone checks before buying.</p>
+                            </div>
+                            <div class="tab-panel" id="reviews" role="tabpanel">
+                                <p>Reviews panel: what other people thought after using it.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="overall" id="buttons">
+                <h2><span class="num">05</span> Buttons</h2>
+                <div class="explaination">
+                    <p>A button triggers an action when clicked — submitting a form, opening a dialog, deleting an item. Its label should name the action itself ("Delete", "Submit"), and its visual weight should hint at how significant or reversible that action is.</p>
+                </div>
+                <div class="example">
+                    <div class="button1">
+                        <h3>Click if you want to learn more about buttons in html</h3>
+                        <a href="https://www.w3schools.com/TAGs/tag_button.asp" target="_blank" rel="noopener">
+                            <button type="button">Learn more...</button>
+                        </a>
+                    </div>
+                    <div class="button2">
+                        <button type="button" class="btn-secondary">Skip</button>
+                    </div>
+                    <div class="button3">
+                        <button type="button" class="btn-danger">Delete</button>
+                    </div>
+                    <div class="button4">
+                        <button type="button" class="btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="overall" id="textlabel">
+                <h2><span class="num">06</span> Text Label</h2>
+                <div class="explaination">
+                    <p>A text label is static text that names or describes another element on the page — a field, a status, a section. When a <code>&lt;label&gt;</code> tag's <code>for</code> attribute matches an input's <code>id</code>, clicking the label also focuses that input.</p>
+                </div>
+                <div class="example">
+                    <div class="textlabel1">
+                        <label for="labelled-name">Enter your name:</label>
+                        <input type="text" id="labelled-name" placeholder="Jane Doe">
+                    </div>
+                    <div class="textlabel2">
+                        <label for="labelled-status" class="status-label">Success! Data saved!</label>
+                        <input type="text" id="labelled-status" value="Saved" disabled>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="overall" id="link">
+                <h2><span class="num">07</span> Link</h2>
+                <div class="explaination">
+                    <p>A link (anchor, <code>&lt;a&gt;</code>) takes a person to another page, another section of the same page, or an external resource. Unlike a button, a link's job is always navigation, not performing an action.</p>
+                </div>
+                <div class="example">
+                    <div class="link1">
+                        <h3>External link</h3>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank" rel="noopener">MDN: the &lt;a&gt; element</a>
+                    </div>
+                    <div class="link2">
+                        <h3>Internal (anchor) link</h3>
+                        <a href="#radiobutton">Jump back to Radiobutton section ↑</a>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="overall" id="tooltip">
+                <h2><span class="num">08</span> Tooltip</h2>
+                <div class="explaination">
+                    <p>A tooltip is a small popup that appears on hover or keyboard focus to give extra context without permanently taking up space on the page — a definition, a hint, or the full text of a truncated label.</p>
+                </div>
+                <div class="example">
+                    <div class="tooltip1">
+                        <span class="has-tooltip" tabindex="0">Hover over this text
+                            <span class="tooltip-bubble">This is a custom CSS tooltip — it appears on hover or keyboard focus.</span>
+                        </span>
+                    </div>
+                    <div class="tooltip2">
+                        <button type="button" title="This uses the native browser tooltip via the title attribute">Hover this button</button>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="overall" id="dropdown">
+                <h2><span class="num">09</span> Dropdown List</h2>
+                <div class="explaination">
+                    <p>A dropdown (<code>&lt;select&gt;</code>) collapses a list of options into a single closed field, expanding only when clicked. It is useful when there are too many options to show all at once as radiobuttons.</p>
+                </div>
+                <div class="example">
+                    <form>
+                        <label for="day">Today is:</label>
+                        <select name="day" id="day">
+                            <option value="mon">Monday</option>
+                            <option value="tue">Tuesday</option>
+                            <option value="wed">Wednesday</option>
+                            <option value="thu">Thursday</option>
+                            <option value="fri">Friday</option>
+                            <option value="sat">Saturday</option>
+                            <option value="sun">Sunday</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+ 
+            <div class="overall" id="datagrid">
+                <h2><span class="num">10</span> Data Grid</h2>
+                <div class="explaination">
+                    <p>A data grid displays information in rows and columns, so many records can be scanned and compared at once. Real-world data grids usually add sorting, filtering, or pagination on top of a plain table.</p>
+                </div>
+                <div class="example">
+                    <table class="data-grid">
+                        <thead>
+                            <tr>
+                                <th>Book</th>
+                                <th>Author</th>
+                                <th>Year</th>
+                                <th>Read</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dune</td>
+                                <td>Frank Herbert</td>
+                                <td>1965</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Norwegian Wood</td>
+                                <td>Haruki Murakami</td>
+                                <td>1987</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>Project Hail Mary</td>
+                                <td>Andy Weir</td>
+                                <td>2021</td>
+                                <td>Yes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+ 
+        <footer class="page-footer">
+            <p>Lab 1 &mdash; UI Elements &mdash; Podkur Nadia</p>
+        </footer>
+ 
+        <script>
+            document.querySelectorAll('.tab').forEach(function (tabGroup) {
+                var buttons = tabGroup.querySelectorAll('.tab-btn');
+                var panels = tabGroup.querySelectorAll('.tab-panel');
+ 
+                buttons.forEach(function (btn) {
+                    btn.addEventListener('click', function () {
+                        var target = btn.getAttribute('data-tab');
+ 
+                        buttons.forEach(function (b) {
+                            b.classList.remove('active');
+                            b.setAttribute('aria-selected', 'false');
+                        });
+                        btn.classList.add('active');
+                        btn.setAttribute('aria-selected', 'true');
+ 
+                        panels.forEach(function (panel) {
+                            panel.classList.toggle('active', panel.id === target);
+                        });
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
